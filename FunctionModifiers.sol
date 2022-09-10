@@ -1,11 +1,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.3; 
 
+contract ownerCheck {
 //State Variable of "Owner"
-address public owner; 
+address owner; 
 
 //This establishes the Owner as msg.sender
-constructor() public { 
+constructor() { 
     owner = msg.sender; 
 }
 
@@ -25,4 +26,7 @@ modifier validAddress(address _addr) {
 function changeOwner(address _newOwner) public onlyOwner validAddress(_newOwner) {
     owner = _newOwner;
 }
+
+}
+
 
