@@ -83,4 +83,9 @@ contract Function {
         x = -2; y = true;
 
     }
+
+    //This is an example of returning 3 values using the same method. 
+    function returnThree() public pure returns(uint a, bool b, int c) {
+        a = 4; b = false; c = -54;
+    }
 }
